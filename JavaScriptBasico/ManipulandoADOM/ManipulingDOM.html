@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulação da DOM</title>
+</head>
+
+<body>
+
+    <!-- <div id="app">
+         Quando o botão é clicado!
+         <button onclick="mostraAlerta()">Botão de Teste</button> 
+         Quando passa o mouse por cima do botão 
+         <button onmouseover="mostraAlerta()">Botão de Teste</button> 
+         <input onkeydown="mostraAlerta()" type="text" /> 
+    </div> -->
+
+    <!-- <div id="a">
+        <input type="text" name="nome" id="nome" class="nome">
+        <button class="botao">Adicionar</button>
+    </div> -->
+
+    <div id="app">
+        <div class="box"></div>
+    </div>
+
+
+    <script>
+        /* function mostraAlerta() {
+            alert("Botão foi clicado!");
+        } */
+
+        //Referenciando elementos da DOM no JavaScript
+
+        // PEGANDO O ELEMENTO PELO ID
+        //var inputElement = document.getElementById('nome');
+
+        //PEGANDO O ELEMENTO PELA TAG
+        //var inputElement = document.getElementsByTagName('input')[0];
+
+        //PEGANDO O ELEMENTO PELA CLASSNAME
+        //var inputElement = document.getElementsByClassName('nome')[0];
+
+        //PEGANDO O ELEMENTO PELA QUERY SELECTOR
+
+        //1° forma
+        //var inputElement = document.querySelector('div#a input');
+
+        //2° forma
+        //var inputElement = document.querySelector('input[name=nome]')
+
+        //3° forma (seleciona somente o primeiro elemento que aparecer)
+        //var inputElement = document.querySelector('input');
+
+        //4° forma (seleciona todos os elemento que tiverem especificados dentro do query (retorna um vetor))
+        // inputElement = document.querySelectorAll('input')[0];
+
+
+        //Manipulando os elementos (pegando valores e acionando funcoes OnClick)
+        /* var btn = document.querySelector('button.botao');
+        var inputElement = document.querySelector('input[name=nome]');
+
+        btn.onclick = function alertA() {
+            var text = inputElement.value;
+            alert(text);
+        } */
+
+        //Criando elementos com Javascript
+        /*  var linkElement = document.createElement('a');
+         linkElement.setAttribute('href', 'http://www.facebook.com');
+
+         var text = document.createTextNode('Acessar site do facebook');
+         linkElement.appendChild(text); */
+
+        //Jogando o elemento dentro do HTML, obs o append child adiciona elementos ao pai (containerElement)
+        /* var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement); */
+
+        //Removendo elemento da DOM
+        /* var containerElement1 = document.querySelector('#a');
+        var inputElement = document.querySelector('input[name=nome]');
+        containerElement1.removeChild(inputElement); */
+
+        //Adicionando elemento com o clique do botão
+        /* var button = document.querySelector('button.botao');
+
+        button.onclick = function adicionar() {
+            containerElement.appendChild(linkElement);
+        } */
+
+        //Alterando estilos
+        var boxElement = document.querySelector('.box');
+        boxElement.style.width = '100px';
+        boxElement.style.height = '100px';
+        boxElement.style.backgroundColor = '#f00';
+
+
+    </script>
+</body>
+
+</html>

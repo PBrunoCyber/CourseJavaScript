@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Condicionais</title>
+</head>
+
+<body>
+    <script>
+        function retornaSexo(sexo) {
+            switch (sexo) {
+                case 'M':
+                    return 'Masculino';
+                    break;
+                case 'F':
+                    return 'Feminino';
+                    break;
+                default:
+                    return 'Outro';
+                    break;
+            }
+
+            /*if (sexo === 'M') {
+                return "Masculino";
+            } else {
+                return "Feminino";
+            }*/
+        }
+
+        var r = retornaSexo('F');
+        console.log(r);
+
+        // AND = && OR = || and NOT = !=
+        var sexo = "F", idade = 23;
+        if (sexo == "M" && idade >= 18) {
+            console.log('Ok');
+        }
+
+        //Verificando se uma condição é true ou false
+        var m = sexo === 'M';
+        console.log(m);
+
+        //Condição Ternária
+        var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+        console.log(retorno);
+
+    </script>
+</body>
+
+</html>

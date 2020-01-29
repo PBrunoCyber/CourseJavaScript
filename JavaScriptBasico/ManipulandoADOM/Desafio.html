@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio - Manipulando a DOM</title>
+    <style>
+        .btn {
+            padding: 20px 60px 20px 60px;
+            border: 0px;
+            background-color: teal;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: mediumseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button class="adiciona btn">Adicionar quadrado</button><br>
+    </div><br><br><br>
+    <div id="quadrado"></div>
+    <div id="nomes">
+        <ul class="tb"></ul>
+        <br><br>
+        <input type="text" name="nome" />
+        <button class="btn1">Adicionar</button>
+    </div>
+    <script>
+
+        //2° QUESTÃO
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+
+        //1° QUESTÃO 
+        var mostra = document.querySelector('#quadrado');
+
+        var botao = document.querySelector('button.adiciona');
+        botao.onclick = function adiciona() {
+            var quadrado = document.createElement('div');
+            quadrado.setAttribute('class', 'quadrado');
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.backgroundColor = '#f00';
+            quadrado.style.marginBottom = '10px';
+            quadrado.style.marginRight = '10px';
+            quadrado.style.float = 'left';
+
+            quadrado.onmouseover = function recebeCor() {
+                quadrado.style.backgroundColor = newColor;
+            }
+
+            mostra.appendChild(quadrado);
+        }
+
+
+        //3° QUESTÃO
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var ul = document.querySelector('ul.tb');
+        for (let i = 0; i < nomes.length; i++) {
+            ul.insertAdjacentHTML('afterbegin', '<li>' + nomes[i] + '</li>');
+        }
+
+        //4° QUESTÃO
+        var input = document.querySelector('input[name=nome]');
+        var button = document.querySelector('#nomes button.btn1');
+
+        button.onclick = function adicionar() {
+            ul.insertAdjacentHTML('beforeend', '<li>' + input.value + '</li>');
+            input.value = "";
+        }
+
+    </script>
+</body>
+
+</html>
