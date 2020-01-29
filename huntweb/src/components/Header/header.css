@@ -1,0 +1,22 @@
+header.head{
+    border-bottom: 2px solid darkred;
+    color:darkred;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.3em;
+    padding: 20px 0px 20px 0px;
+    align-items: center;
+    justify-content: space-around;
+}
+    .head > h1 {
+        display: flex;
+        flex-basis: 30%;
+    }
+    .head > ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-basis: 50%;
+    }
+    .head > ul > li{
+        margin: 0px 20px 0px 20px;
+    }

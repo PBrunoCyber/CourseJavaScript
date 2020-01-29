@@ -1,0 +1,170 @@
+body{
+    background-color: white;
+}
+.title{
+    color: darkred;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: whitesmoke;
+    text-transform: uppercase; 
+    margin-bottom: 50px;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 250px;
+    background-color: white;
+    margin-top: 40px;
+}
+.footer > div{
+    font-weight: bold;
+    color: darkred;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+    margin:0 auto;
+    grid-gap: 15px;
+}
+
+.product-list > article {
+    border: 1px solid darkred;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.1em;
+    justify-content: center;
+}
+.product-list > article > b{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.product-list > article > img{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-top: -5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    grid-gap: 10px;
+}
+.buttons > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    color:black;
+    border:1px solid black;
+    background-color: white;
+}
+    .buttons > a:hover {
+        cursor: pointer;
+        color:white;
+        border:1px solid black;
+        background-color: black;
+    }
+.buttons > button{
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    color:darkred;
+    border:1px solid darkred;
+    background-color: white;
+    font-size: 1.0em;
+}
+    .buttons > button:hover{
+        cursor: pointer;
+        color:white;
+        border:1px solid white;
+        background-color: darkred;
+    }
+
+    @media(max-width:600px){
+        .product-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 90%;
+            margin:0 auto;
+            grid-gap: 15px;
+        }
+        .title{
+            text-align: center;
+            
+        }
+    }
+
+.actions {
+    display: flex;
+    max-width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.actions > button {
+    margin-top: 40px;
+    font-size: 1em;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    width: 120px;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 30px; 
+}
+.actions > button:hover{
+    cursor: pointer;
+    background-color: darkred;
+    border: 1px solid darkred;
+    color:white;
+}
+.actions > button[disabled]{
+    cursor: default;
+    opacity: 0.5;
+}
+.actions > button[disabled]:hover{
+    opacity: 0.5;
+    background-color: black;
+    border: 0;
+}
+
+.adicionar {
+    border-radius: 100%;
+    font-size: 4em;
+    width: 90px;
+    height: 90px;
+    border:6px solid darkred;
+    background-color: white;
+    color:darkred;
+    position: fixed;
+    left: 88vw;
+    top: 75%;
+}
+.adicionar:hover{
+    border:5px solid darkred;
+    background-color: darkred;
+    color:white;
+    cursor: pointer;
+    transform: scale(1);
+    transition-duration: 0.3s;
+}
+@media(max-width:900px){
+    .adicionar{
+        left: 75%;
+    }
+}

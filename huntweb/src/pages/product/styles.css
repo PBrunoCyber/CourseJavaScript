@@ -1,0 +1,26 @@
+.details {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    color:darkred;
+    justify-content: center;
+    align-items: center;
+
+}
+.products-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 300px;
+    max-width: 80%;
+    margin-top: -90px;
+}
+
+.products-details > img{
+    width: 600px;
+    height: 600px;
+}
