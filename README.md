@@ -12,5 +12,5 @@ This is a course of javascript including: JavaScript, ES6, ReactJS and NodeJS
 5. **Ok! now for to use your SSH, you need to create a repository and use the SSH URL**
 6. **Open your terminal and type ```git init```, and ```git remote add origin <ssh url>```**
     * ps: type without the symbol <>
-7. **After this, for ```push``` your files you need to type ``` eval `ssh-agent` ``` and then ``` ssh-add <directory of <name> file created by ssh-keygen command>```**
+7. **After this, for ```push``` your files you need to type ``` eval `ssh-agent` ``` and then ``` ssh-add <directory of <name> file created by ssh-keygen command>```. Ex: ``` ssh-add /home/user/Documents/GitHub/bruno ```**
     * ps: type without the symbol <>
