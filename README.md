@@ -2,7 +2,7 @@
 
 This in a course of javascript including: JavaScript, ES6, ReactJS and NodeJS
 
-#### But here i'm teaching how do you creats a SSH for accesing your GitHub (Security Method)
+#### But here I will teach you how to create an SSH to access your GitHub (security method)
 
 1. **You need to create a folder whatever you want**
 2. **Open the terminal inside your folder and type ``` ssh-keygen ```**
