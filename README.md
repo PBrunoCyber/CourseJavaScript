@@ -1,6 +1,6 @@
 # Course JavaScript
 
-This in a course of javascript including: JavaScript, ES6, ReactJS and NodeJS
+This is a course of javascript including: JavaScript, ES6, ReactJS and NodeJS
 
 #### But here I will teach you how to create an SSH to access your GitHub (security method)
 
