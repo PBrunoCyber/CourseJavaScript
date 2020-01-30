@@ -44,7 +44,22 @@ body{
     font-size: 1.1em;
     justify-content: center;
 }
-.product-list > article > b{
+.product-list > article > a > i {
+    margin-right: -10px;
+    margin-top: -10px;
+    border:1px solid black;
+    color: black;
+    padding: 5px;
+    font-size: 1.0em;
+    border-radius: 20px;
+    float: right;
+}
+    .product-list > article > a> i:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+.product-list > article > div > b{
     display: flex;
     margin-bottom: 10px;
 }
