@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
-
+import { Link } from 'react-router-dom';
 //Estilização
 import './styles.css';
 import './modal.css';
@@ -158,16 +158,21 @@ export default class Main extends Component {
                         </div>
                     </div>
                 </div>
+
+                {/* List Products */}
                 <div className="product-list">
                     {/* Para percorrer os produtos se faz um map 
                     OBS: é preciso adicionar um key com valor único!*/}
                     {products.map(product =>
                         (<article key={product._id}>
                             <img src={product.image_link} alt={product.title} />
-                            <b>{product.title}</b>
+                            <Link to={`product_edit/${product._id}`}><i className="material-icons">edit</i></Link>
+                            <div>
+                                <b>{product.title}</b>
+                            </div>
                             <p>{product.description}</p>
                             <div className="buttons">
-                                <a href={`/products/${product._id}`}>Acessar</a>
+                                <a href={`/product/${product._id}`}>Acessar</a>
                                 <button onClick={() => this.openModalDelete(product._id, product.title)}>Deletar</button>
                             </div>
                         </article>))
@@ -177,9 +182,13 @@ export default class Main extends Component {
                     <button disabled={page === 1} onClick={this.prevPage}> Anterior </button>
                     <button disabled={page === productInfo.pages} onClick={this.nextPage}> Próximo </button>
                 </div>
+
+                {/* Button Add */}
                 <div>
                     <button className="adicionar" onClick={this.openModalAdd}>+</button>
                 </div>
+
+                {/* Footer */}
                 <footer className="footer">
                     <div>Created by Bruno Fernandes</div>
                 </footer>
